@@ -59,6 +59,16 @@ p {
   }
 }
 
+/* Header Styes */
+.cosmic-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(101, 19, 215, 0.25);
+}
+
 /* Game Card Components */
 .game-cards {
   display: flex;
