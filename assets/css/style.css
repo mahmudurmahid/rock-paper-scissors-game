@@ -107,12 +107,12 @@ p {
 }
 
 /* Make images act as buttons */
-.game-cards .card img {
+.game-cards .game-card-hover {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 /* Hover effect for images */
-.game-cards .card img:hover {
+.game-cards .game-card-hover:hover {
   transform: scale(1.05);
 }
