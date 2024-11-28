@@ -88,20 +88,22 @@ p {
 
 /* Styling for individual cards */
 .game-cards .card {
-  width: 10rem;
+  width: 5rem; /* Fixed width */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  border-radius: 8px; /* Smooth corners */
+  background: transparent; /* Fully transparent card background */
 }
 
 .game-cards .card-body {
-  color: green;
-  opacity: 1;
-  h5 {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-  }
-  padding: 0;
+  color: white; /* Text color */
+  background-color: rgba(232, 119, 14, 0.1);
+  padding: 0.5rem;
+  border-radius: 8px; /* Smooth rounded edges */
+}
+
+.game-cards .card-title {
+  font-size: 1rem;
 }
 
 /* Make images act as buttons */
