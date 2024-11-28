@@ -1,0 +1,30 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Russo+One&family=Share+Tech+Mono&family=Zen+Dots&display=swap");
+
+/* Global Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: zen dots;
+  color: white;
+}
+
+p {
+  font-family: exo;
+}
+
+.nebula-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* Lowest layer */
+}
