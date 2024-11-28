@@ -59,3 +59,125 @@
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
+
+/* Space Theme Button Styles */
+:root {
+    --space-purple: #4B0082;
+    --space-blue: #1E90FF;
+    --cosmic-glow: #00FFFF;
+    --star-white: #FFFFFF;
+    --nebula-pink: #FF69B4;
+    --deep-space: #0D0221;
+    --meteor-orange: #FF4500;
+  }
+  
+  .game-button {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: var(--star-white);
+    background: linear-gradient(45deg, var(--space-purple), var(--space-blue));
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px var(--cosmic-glow);
+    overflow: hidden;
+  }
+  
+  .game-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent 20%, var(--cosmic-glow) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .game-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px var(--cosmic-glow);
+  }
+  
+  .game-button:hover::before {
+    opacity: 0.2;
+  }
+  
+  .game-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 10px var(--cosmic-glow);
+  }
+  
+  /* Selected state for active choice */
+  .game-button.selected {
+    background: linear-gradient(45deg, var(--nebula-pink), var(--meteor-orange));
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Winning state */
+  .game-button.winner {
+    background: linear-gradient(45deg, #FFD700, var(--meteor-orange));
+    box-shadow: 0 0 30px #FFD700;
+  }
+  
+  /* Losing state */
+  .game-button.loser {
+    background: linear-gradient(45deg, var(--deep-space), #4A4A4A);
+    opacity: 0.7;
+  }
+  
+  /* Disabled state */
+  .game-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none;
+  }
+  
+  /* Custom animations */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 15px var(--cosmic-glow);
+    }
+    50% {
+      box-shadow: 0 0 25px var(--cosmic-glow);
+    }
+    100% {
+      box-shadow: 0 0 15px var(--cosmic-glow);
+    }
+  }
+  
+  /* Star particle effect */
+  .game-button::after {
+    content: '✦';
+    position: absolute;
+    color: var(--star-white);
+    font-size: 10px;
+    pointer-events: none;
+    animation: float 3s infinite;
+    opacity: 0;
+  }
+  
+  .game-button:hover::after {
+    opacity: 1;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -200%) rotate(360deg);
+      opacity: 0;
+    }
+  }
