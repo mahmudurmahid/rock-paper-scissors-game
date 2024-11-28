@@ -58,3 +58,39 @@ p {
     opacity: 0;
   }
 }
+
+/* Game Card Components */
+.game-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Container for all cards */
+.game-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Styling for individual cards */
+.game-cards .card {
+  width: 10rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Make images act as buttons */
+.game-cards .card img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.game-cards .card img:hover {
+  transform: scale(1.05);
+}

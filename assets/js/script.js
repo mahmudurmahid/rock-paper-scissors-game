@@ -22,3 +22,9 @@ function generateStars() {
 document.addEventListener("DOMContentLoaded", () => {
   generateStars();
 });
+
+// Game Card Components
+function handleImageClick() {
+  alert("Image button clicked!");
+  // Add your desired action here, such as navigation
+}
