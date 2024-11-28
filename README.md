@@ -2,7 +2,7 @@
 
 👩🏻‍💻 View an example of this section [here](https://github.com/kera-cudmore/Bully-Book-Club#bully-book-club-website)
 
-Add a Blurb about the site here, what does it do, why did you build it?
+Rock, paper, Scissors, Space is an interactive static website which allows a user to play the game rock, paper, scissors against the computer opponent. We added additional fetaures such as a space theme with the moves such as lizard and spock for a fun variation of the tradional game.  
 
 Add an image of the finished site here. I like to use [amiresponsive](https://ui.dev/amiresponsive) to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
 
