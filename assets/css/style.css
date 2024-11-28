@@ -14,6 +14,7 @@ h6 {
 
 p {
   font-family: "Exo", sans-serif;
+  color: white;
 }
 
 /* Background Image & Shooting Star Effect */
@@ -58,6 +59,7 @@ p {
   }
 }
 
+
 /*Nav Bar */
 
 #navbar {
@@ -95,4 +97,62 @@ p {
                0 0 40px #2816c8, /* Even larger magenta glow */
                0 0 50px #1e1ee1, /* Largest magenta glow */
                0 0 60px #6f11ea; /* Largest magenta glow */
+
+/* Header Styes */
+.cosmic-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(101, 19, 215, 0.25);
+}
+
+/* Game Card Components */
+.game-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Container for all cards */
+.game-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Styling for individual cards */
+.game-cards .card {
+  width: 5rem; /* Fixed width */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Smooth corners */
+  background: transparent; /* Fully transparent card background */
+}
+
+.game-cards .card-body {
+  color: white; /* Text color */
+  background-color: rgba(232, 119, 14, 0.1);
+  padding: 0.5rem;
+  border-radius: 8px; /* Smooth rounded edges */
+}
+
+.game-cards .card-title {
+  font-size: 1rem;
+}
+
+/* Make images act as buttons */
+.game-cards .game-card-hover {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.game-cards .game-card-hover:hover {
+  transform: scale(1.05);
+
 }

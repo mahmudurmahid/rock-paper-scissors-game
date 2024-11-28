@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rock Paper Scissors Game</title>
+    <title>Cosmic Clash</title>
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -46,11 +46,66 @@
       </div>
     </div>
   </nav>
-  <header>
-    <h1>Rock Paper Scissors Game</h1>
+
+  <!-- Header -->
+  <header class="cosmic-header">
+    <h1>Cosmic Clash</h1>
+    <p>A classic interstellar showdown of Rock, Paper, Scissors, Lizard, Spock!</p>
   </header>
 
-  <main></main>
+  <main>
+  <!-- Game Cards -->
+  <section class="game-cards container my-5">
+    <div class="d-flex flex-row flex-wrap justify-content-center align-items-stretch gap-3">
+    <!-- Card 1: Rock -->
+    <div class="card text-center game-card-hover" style="width: 8rem;">
+      <a href="#" onclick="handleImageClick()" style="display: block;">
+        <img src="assets/images/rock.webp" class="card-img-top" alt="Rock">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">ROCK</h5>
+      </div>
+    </div>
+    <!-- Card 2: Paper -->
+    <div class="card text-center game-card-hover" style="width: 8rem;">
+      <a href="#" onclick="handleImageClick()" style="display: block;">
+        <img src="assets/images/paper.webp" class="card-img-top" alt="Paper">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">PAPER</h5>
+      </div>
+    </div>
+    <!-- Card 3: Scissors -->
+    <div class="card text-center game-card-hover" style="width: 8rem;">
+      <a href="#" onclick="handleImageClick()" style="display: block;">
+        <img src="assets/images/scissors.webp" class="card-img-top" alt="Scissors">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">SCISSORS</h5>
+      </div>
+    </div>
+    <!-- Card 4: Lizard -->
+    <div class="card text-center game-card-hover" style="width: 8rem;">
+      <a href="#" onclick="handleImageClick()" style="display: block;">
+        <img src="assets/images/lizard.webp" class="card-img-top" alt="Lizard">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">LIZARD</h5>
+      </div>
+    </div>
+    <!-- Card 5: Spock -->
+    <div class="card text-center game-card-hover" style="width: 8rem;">
+      <a href="#" onclick="handleImageClick()" style="display: block;">
+        <img src="assets/images/spock.webp" class="card-img-top" alt="Spock">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">SPOCK</h5>
+      </div>
+    </div>
+    </div>
+  </section>
+    
+  </main>
   <!--Footer with github profiles-->
   <footer id="contact" class="mt-auto">
     <div class="footer-icons d-flex justify-content-evenly">
