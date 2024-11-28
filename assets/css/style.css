@@ -84,6 +84,15 @@ p {
   border-radius: 8px;
 }
 
+.game-cards .card-body {
+  color: green;
+  opacity: 1;
+  h5 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+}
+
 /* Make images act as buttons */
 .game-cards .card img {
   cursor: pointer;
