@@ -175,6 +175,8 @@ The Credits section is where you can credit all the people and sources you used 
 
 If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
 
+- Shooting Star Effect: https://codepal.ai/code-generator/query/aQ9s3clw/javascript-shooting-star-animation?utm_source=chatgpt.com#google_vignette; https://codepen.io/bobwonch/pen/KwYEwx?utm_source=chatgpt.com; 
+
 ### Content
 
 Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
