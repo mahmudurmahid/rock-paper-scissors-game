@@ -133,6 +133,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//Update the scoreboard
+
+let wins = 0;
+let losses = 0;
+let ties = 0;
+
+function updateScoreBoard() {
+    document.getElementById('wins').textContent = wins; 
+    document.getElementById('losses').textContent = losses; 
+    document.getElementById('ties').textContent = ties;
+}
+
 // Add required styles
 const styles = `
     .choice-image {
