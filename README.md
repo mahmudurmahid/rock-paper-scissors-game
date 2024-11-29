@@ -1,8 +1,8 @@
-# Rock, paper, Scissors, Space
+# Cosmic Clash 
 
 👩🏻‍💻 View an example of this section [here](https://github.com/kera-cudmore/Bully-Book-Club#bully-book-club-website)
 
-Rock, paper, Scissors, Space is an interactive static website which allows a user to play the game rock, paper, scissors against the computer opponent. We added additional fetaures such as a space theme with the moves such as lizard and spock for a fun variation of the tradional game.  
+Cosmic Clash is an interactive static website which allows a user to play the game rock, paper, scissors against the computer opponent. We added additional fetaures such as a space theme with the moves such as lizard and spock for a fun variation of the tradional game.  
 
 Add an image of the finished site here. I like to use [amiresponsive](https://ui.dev/amiresponsive) to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
 
@@ -51,15 +51,40 @@ If you want to add optional [shields.io](https://shields.io) badges to your READ
 
 ## User Experience (UX)
 
-👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/Bully-Book-Club#user-experience-ux)
-
 ### User Stories
 
-Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
+First time and returning user stories: 
+
+As a user, I want the game to correctly determine the winner based on RPSLS rules so that I can see who wins each round.
+
+As a user, I want a limited number of tries in a game so that the game feels challenging and finite.
+
+As a user, I want my scores to be tracked during the game so that I can see how well I perform in a session.
+
+As a user, I want to play against a computer opponent so that I have a challenging and interactive experience.
+
+As a user, I want clear instructions on how to play so that I can understand the rules and enjoy the game.
+
+As a user, I want a reset button so that I can start the game over at any time.
+
+As a user, I want a clear end-game message so that I know when the game is over.
 
 ## Design
 
 👩🏻‍💻 View an example of a completed design section [here](https://github.com/kera-cudmore/earth-day-hackathon-2022#Design)
+
+### Wireframes
+
+Wireframes were created for mobile and desktop using Balsamiq.
+
+<details>
+<summary>Index Page Wireframe</summary>
+<br>
+
+![Index mobile page](readme/wireframes/game%20mock%20up%20draft%202%20mobile.png)
+![Index desktop page](readme/wireframes/game%20mock%20up%20draft%202%20desk.png)
+
+</details>
 
 ### Colour Scheme
 
@@ -82,14 +107,6 @@ I also like to include an image of the fonts chosen as a reference.
 ### Imagery
 
 Use this section to explain what sort of imagery you plan to use through your site.
-
-### Wireframes
-
-Add the images or links for your wireframes here.
-
-There are lots of different options to create your wireframes - Code Institute students can access [Balsamiq](https://balsamiq.com/) as part of the course.
-
-Some other options include [Figma](https://www.figma.com/), [AdobeXD](https://www.adobe.com/products/xd.html), [Sketch](https://www.sketch.com/?utm_source=google&utm_medium=cpc&adgroup=uxui&device=c&matchtype=e&utm_campaign=ADDICTMOBILE_SKETCH_GAD_DG_UK_T1_ALWAYS-ON_S_TRF_PROS_BRAND&utm_term=sketch&utm_source=google&utm_medium=cpc&utm_content=TOF_BRND__generic&hsa_acc=8710913982&hsa_cam=16831089317&hsa_grp=134620695759&hsa_ad=592060065319&hsa_src=g&hsa_tgt=kwd-14921750&hsa_kw=sketch&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwr4eYBhDrARIsANPywCjRIFn93DMezYnsyE5Fic_8l8kynJtut0GYMU01TiohHjwziFtlH0gaAhteEALw_wcB) and [Mockup](https://apps.apple.com/us/app/mockup-sketch-ui-ux/id1527554407) to name just a few! Or you can even go old school and get those wireframes completed using pen and paper. Just snap an image of the completed wireframes to add the images to the README.
 
 ## Features
 
@@ -125,7 +142,7 @@ Code Institute have an amazing channel for all things accessibility (a11y-access
 
 ### Languages Used
 
-Make a note here of all the languages used in creating your project. For the first project this will most likely just be HTML & CSS.
+HTML, CSS, JavaScript 
 
 ### Frameworks, Libraries & Programs Used
 
@@ -135,27 +152,52 @@ Make sure to include things like git, GitHub, the program used to make your wire
 
 A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
 
+Balsamiq - Used to create wireframes.
+
+Github - To save and store the files for the website.
+
+Google Fonts - To import the fonts used on the website.
+
+Font Awesome - For the iconography on the website.
+
+Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+Favicon.io To create favicon.
+
 ### AI
 
 ## Deployment & Local Development
 
-👩🏻‍💻 View an example of a completed Deployment & Local Development section [here](https://github.com/kera-cudmore/TheQuizArms#Deployment)
-
 ### Deployment
 
-Include instructions here on how to deploy your project. For your first project you will most likely be using GitHub Pages.
+We utilised Github Pages to deploy the game site. Please find a guide on how to do so below:
+
+1. Log in to Github.
+2. Find the repository called Rock-paper-scissors-game.
+3. Click on the settings icon.
+4. On the left hand side in the navigation page, find the Pages link.
+5. In the  Branch section of Build and Deploy, make sure to choose main from the drop down menu. then select Root in the folder drop menu.
+6. Click Save. The site is now live and can be accessed via the URL. This can also be found on the repository homepage.
 
 ### Local Development
 
-The local development section gives instructions on how someone else could make a copy of your project to play with on their local machine. This section will get more complex in the later projects, and can be a great reference to yourself if you forget how to do this.
-
 #### How to Fork
 
-Place instructions on how to fork your project here.
+To fork the repository:
+
+1. Log in to Github.
+2. Find the Rock-paper-scissors-game repository.
+3. Find the fork button in the top right hand corner.
 
 #### How to Clone
 
-Place instructions on how to clone your project here.
+To clone the Rock-paper-scissors-game repository:
+
+1. Log in to Github.
+2. Find the Rock-paper-scissors-game repository.
+3. Click on the code button, in the clone section select the option you desire to clone the project with. Then copy the URL.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 ## Testing
 
@@ -167,10 +209,6 @@ Use this part of the README to link to your TESTING.md file - you can view the e
 
 ## Credits
 
-👩🏻‍💻 View an example of a completed Credits section [here](https://github.com/kera-cudmore/BookWorm#Credits)
-
-The Credits section is where you can credit all the people and sources you used throughout your project.
-
 ### Code Used
 
 If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
@@ -181,10 +219,17 @@ If you have used some code in your project that you didn't write, this is the pl
 
 Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
 
+ReadMe: 
+
+[ReadMe Template](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md)
+
+
 ###  Media
 
 If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
   
 ###  Acknowledgments
 
-If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
+Amy Richardson - our Bootcamp group facilitator, thank you for your constant positive energy and feedback!
+
+The South Yorkshire group - thanks for the support on Slack!
