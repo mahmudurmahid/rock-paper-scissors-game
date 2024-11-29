@@ -283,3 +283,214 @@ function handleResetError() {
         resultElement.appendChild(refreshButton);
     }
 }
+
+
+
+
+// Game choices
+const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+
+// Winning combinations
+const winningCombos = {
+    rock: ['scissors', 'lizard'],
+    paper: ['rock', 'spock'],
+    scissors: ['paper', 'lizard'],
+    lizard: ['paper', 'spock'],
+    spock: ['rock', 'scissors']
+};
+
+// Get DOM elements
+const buttons = document.querySelectorAll('.game-button');
+const resultDisplay = document.createElement('div');
+resultDisplay.id = 'result';
+document.querySelector('main').appendChild(resultDisplay);
+
+// Add click event listeners to buttons
+buttons.forEach(button => {
+    button.addEventListener('click', () => playRound(button.textContent.toLowerCase()));
+});
+
+function playRound(userChoice) {
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    const result = determineWinner(userChoice, computerChoice);
+    displayResult(userChoice, computerChoice, result);
+    animateChoices(userChoice, computerChoice);
+}
+
+function determineWinner(user, computer) {
+    if (user === computer) return 'tie';
+    return winningCombos[user].includes(computer) ? 'win' : 'lose';
+}
+
+function displayResult(user, computer, result) {
+    let message;
+    switch (result) {
+        case 'win':
+            message = "The Universe Is Saved! 🌟";
+            break;
+        case 'lose':
+            message = "The Alien Has Conquered The Universe! 👾";
+            break;
+        case 'tie':
+            message = "You Have Attained Cosmic Balance! ☯️";
+            break;
+    }
+    resultDisplay.innerHTML = `
+        <p>You chose ${user.toUpperCase()} 🌎</p>
+        <p>The Alien chose ${computer.toUpperCase()} 👽</p>
+        <h2>${message}</h2>
+    `;
+}
+
+function animateChoices(user, computer) {
+    buttons.forEach(button => {
+        button.classList.remove('selected', 'winner', 'loser');
+        if (button.textContent.toLowerCase() === user) {
+            button.classList.add('selected');
+        }
+    });
+
+    setTimeout(() => {
+        buttons.forEach(button => {
+            if (button.textContent.toLowerCase() === user) {
+                button.classList.add(determineWinner(user, computer) === 'win' ? 'winner' : 'loser');
+            }
+            if (button.textContent.toLowerCase() === computer) {
+                button.classList.add(determineWinner(computer, user) === 'win' ? 'winner' : 'loser');
+            }
+        });
+    }, 500);
+}
+
+// Reset functionality
+const resetButtons = document.querySelectorAll('.reset-btn');
+resetButtons.forEach(button => {
+    button.addEventListener('click', resetGame);
+});
+
+function resetGame() {
+    buttons.forEach(button => {
+        button.classList.remove('selected', 'winner', 'loser');
+    });
+    resultDisplay.innerHTML = '';
+}
+
+
+
+// Complete victory conditions with explanations
+const victoryConditions = {
+    rock: {
+        scissors: "Rock crushes Scissors 🌑",
+        lizard: "Rock crushes Lizard 🌋"
+    },
+    paper: {
+        rock: "Paper covers Rock 📜",
+        spock: "Paper disproves Spock 📄"
+    },
+    scissors: {
+        paper: "Scissors cuts Paper ✂️",
+        lizard: "Scissors decapitates Lizard 🦎"
+    },
+    lizard: {
+        paper: "Lizard eats Paper 🦎",
+        spock: "Lizard poisons Spock 🧪"
+    },
+    spock: {
+        rock: "Spock vaporizes Rock ⚡",
+        scissors: "Spock smashes Scissors 🖖"
+    }
+};
+
+// Enhanced determine winner function with detailed outcome
+function determineWinner(playerChoice, computerChoice) {
+    // Convert choices to lowercase for consistency
+    playerChoice = playerChoice.toLowerCase();
+    computerChoice = computerChoice.toLowerCase();
+    
+    // Check for tie
+    if (playerChoice === computerChoice) {
+        return {
+            result: 'tie',
+            message: "Cosmic forces are balanced! ☯️"
+        };
+    }
+    
+    // Check if player wins
+    if (victoryConditions[playerChoice]?.[computerChoice]) {
+        return {
+            result: 'player',
+            message: `Victory! ${victoryConditions[playerChoice][computerChoice]}`
+        };
+    }
+    
+    // Computer wins
+    return {
+        result: 'computer',
+        message: `Defeat! ${victoryConditions[computerChoice][playerChoice]}`
+    };
+}
+
+// Enhanced play round function with animations
+function playRound(playerChoice) {
+    if (gameState.gameOver) return;
+
+    const computerChoice = gameState.choices[Math.floor(Math.random() * gameState.choices.length)];
+    const outcome = determineWinner(playerChoice, computerChoice);
+    
+    // Update scores
+    updateScores(outcome.result);
+    gameState.tries--;
+    
+    // Update display with animations
+    animateChoices(playerChoice, computerChoice, outcome);
+    displayResult(outcome.message);
+    
+    // Check for game end
+    if (gameState.tries === 0 || gameState.playerScore === 3 || gameState.computerScore === 3) {
+        endGame();
+    }
+}
+
+// Animate the choices
+function animateChoices(playerChoice, computerChoice, outcome) {
+    // Remove previous animations
+    document.querySelectorAll('.game-button').forEach(btn => {
+        btn.classList.remove('selected', 'winner', 'loser');
+    });
+    
+    // Add new animations with delay for visual effect
+    setTimeout(() => {
+        document.querySelectorAll('.game-button').forEach(btn => {
+            const choice = btn.textContent.toLowerCase();
+            
+            if (choice === playerChoice) {
+                btn.classList.add('selected');
+                btn.classList.add(outcome.result === 'player' ? 'winner' : 'loser');
+            }
+            
+            if (choice === computerChoice) {
+                btn.classList.add(outcome.result === 'computer' ? 'winner' : 'loser');
+            }
+        });
+    }, 200);
+}
+
+// Display the result with space theme
+function displayResult(message) {
+    const resultElement = document.getElementById('result');
+    if (!resultElement) return;
+
+    // Clear previous content
+    resultElement.innerHTML = '';
+    
+    // Create and animate new content
+    const resultText = document.createElement('div');
+    resultText.className = 'result-text';
+    resultText.innerHTML = `
+        <div class="cosmic-message">
+            ${message}
+        </div>
+    `;
+    
+    resultElement.appendChild(resultText);
+}
