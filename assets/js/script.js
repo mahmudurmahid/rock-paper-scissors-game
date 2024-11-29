@@ -28,3 +28,148 @@ function handleImageClick() {
   alert("Image button clicked!");
   // Add your desired action here, such as navigation
 }
+
+
+
+
+
+
+
+
+
+// Game choices
+const choices = ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK'];
+
+// Game rules defining what beats what
+const rules = {
+    'ROCK': ['SCISSORS', 'LIZARD'],
+    'PAPER': ['ROCK', 'SPOCK'],
+    'SCISSORS': ['PAPER', 'LIZARD'],
+    'LIZARD': ['PAPER', 'SPOCK'],
+    'SPOCK': ['ROCK', 'SCISSORS']
+};
+
+// Get computer choice
+function getComputerChoice() {
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+}
+
+// Determine winner
+function determineWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        return 'TIE';
+    }
+    return rules[userChoice].includes(computerChoice) ? 'WIN' : 'LOOSE';
+}
+
+// Get result message
+function getResultMessage(result, userChoice, computerChoice) {
+    const messages = {
+        'WIN': `You Win! ${userChoice} beats ${computerChoice}!`,
+        'LOSE': `You Lose! ${computerChoice} beats ${userChoice}!`,
+        'TIE': `It's a Tie! Both chose ${userChoice}!`
+    };
+    return messages[result];
+}
+
+// Handle game card click
+function handleImageClick(event) {
+    event.preventDefault();
+    const userChoice = event.currentTarget.querySelector('.card-title').textContent;
+    const computerChoice = getComputerChoice();
+    
+    // Get result and message
+    const result = determineWinner(userChoice, computerChoice);
+    const message = getResultMessage(result, userChoice, computerChoice);
+    
+    // Show choices and result with animation
+    displayResult(userChoice, computerChoice, message, result);
+}
+
+// Display result with animation
+function displayResult(userChoice, computerChoice, message, result) {
+    // Create or get result container
+    let resultContainer = document.getElementById('game-result');
+    if (!resultContainer) {
+        resultContainer = document.createElement('div');
+        resultContainer.id = 'game-result';
+        resultContainer.className = 'text-center mt-4';
+        document.querySelector('.game-cards').after(resultContainer);
+    }
+    
+    // Update result content with animation
+    resultContainer.innerHTML = `
+        <div class="choices-container d-flex justify-content-center gap-5 mb-3">
+            <div class="player-choice">
+                <h3>You chose:</h3>
+                <img src="assets/images/${userChoice.toLowerCase()}.webp" 
+                     alt="${userChoice}" 
+                     class="choice-image animate__animated animate__bounceIn"
+                     style="width: 100px;">
+            </div>
+            <div class="computer-choice">
+                <h3>Computer chose:</h3>
+                <img src="assets/images/${computerChoice.toLowerCase()}.webp" 
+                     alt="${computerChoice}" 
+                     class="choice-image animate__animated animate__bounceIn"
+                     style="width: 100px;">
+            </div>
+        </div>
+        <div class="result-message ${result.toLowerCase()} animate__animated animate__fadeIn">
+            <h2>${message}</h2>
+        </div>
+    `;
+}
+
+// Add click event listeners to all game cards
+document.addEventListener('DOMContentLoaded', () => {
+    const gameCards = document.querySelectorAll('.game-card-hover');
+    gameCards.forEach(card => {
+        card.addEventListener('click', handleImageClick);
+    });
+});
+
+// Add required styles
+const styles = `
+    .choice-image {
+        transition: transform 0.3s ease;
+    }
+    .result-message {
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+    .result-message.win {
+        background: rgba(40, 167, 69, 0.2);
+    }
+    .result-message.lose {
+        background: rgba(220, 53, 69, 0.2);
+    }
+    .result-message.tie {
+        background: rgba(255, 193, 7, 0.2);
+    }
+    .animate__animated {
+        animation-duration: 0.75s;
+    }
+    .animate__bounceIn {
+        animation-name: bounceIn;
+    }
+    .animate__fadeIn {
+        animation-name: fadeIn;
+    }
+    @keyframes bounceIn {
+        0% { transform: scale(0); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+`;
+
+// Add styles to document
+const styleSheet = document.createElement('style');
+styleSheet.textContent = styles;
+document.head.appendChild(styleSheet);

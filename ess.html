@@ -3,35 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RPSLS Game</title>
     <link href="assets/css/ess.css" rel="stylesheet" />
 </head>
 <body>
     <main>
-        <div>
+        <!-- Game buttons -->
+        <div class="game-buttons">
             <button class="game-button">Rock</button>
-            <button class="game-button selected">Paper</button>
-            <button class="game-button winner">Scissors</button>
+            <button class="game-button">Paper</button>
+            <button class="game-button">Scissors</button>
+            <button class="game-button">Lizard</button>
+            <button class="game-button">Spock</button>
         </div>
-       
-        <!-- Main reset button in game container -->
-<div class="text-center">
-    <button type="button" class="reset-btn" id="mainResetBtn" aria-label="Reset Game">
-        🔄 Reset Mission
-    </button>
-</div>
 
-<!-- Reset button in game over modal -->
-<div class="modal-footer border-0">
-    <button type="button" 
-            class="reset-btn" 
-            id="modalResetBtn"
-            data-bs-dismiss="modal" 
-            aria-label="Start New Game">
-        Start New Mission 🚀
-    </button>
-</div>
+        <!-- Score display -->
+        <div class="score-display">
+            <p>Player Score: <span id="playerScore">0</span></p>
+            <p>Computer Score: <span id="computerScore">0</span></p>
+            <p>Tries Left: <span id="tries">5</span></p>
+        </div>
+
+        <!-- Result display -->
+        <div id="result" class="result-display">
+            Choose your cosmic weapon, Space Warrior! 🛸
+        </div>
+
+        <!-- Main reset button -->
+        <div class="text-center">
+            <button type="button" class="reset-btn" id="mainResetBtn" aria-label="Reset Game">
+                🔄 Reset Mission
+            </button>
+        </div>
+
+        <!-- Game over modal (hidden by default) -->
+        <div id="gameOverModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Game Over</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- The end game message will be dynamically inserted here -->
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" 
+                                class="reset-btn" 
+                                id="modalResetBtn"
+                                data-bs-dismiss="modal" 
+                                aria-label="Start New Game">
+                            Start New Mission 🚀
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!-- JavaScript file -->
     <script src="../assets/js/ess.js"></script>
 </body>
 </html>

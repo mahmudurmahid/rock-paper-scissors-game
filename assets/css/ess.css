@@ -181,3 +181,119 @@
       opacity: 0;
     }
   }
+/* More intense gradient for Lizard button */
+.game-button.one {
+  background: linear-gradient(45deg, #00FF87, #00B359);  /* Brighter emerald to deep green */
+  box-shadow: 0 0 20px #00FF87;
+  border: 1px solid #00FF87;
+}
+
+.game-button.one:hover {
+  background: linear-gradient(45deg, #00FF9D, #00CC66);
+  box-shadow: 0 0 35px #00FF87;
+  transform: translateY(-3px);
+}
+
+.game-button.one:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 15px #00FF87;
+}
+
+/* More intense gradient for Spock button */
+.game-button.two {
+  background: linear-gradient(45deg, #FF00FF, #FF1493);  /* Hot pink to deep pink */
+  box-shadow: 0 0 20px #FF00FF;
+  border: 1px solid #FF00FF;
+}
+
+.game-button.two:hover {
+  background: linear-gradient(45deg, #FF33FF, #FF0066);
+  box-shadow: 0 0 35px #FF00FF;
+  transform: translateY(-3px);
+}
+
+.game-button.two:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 15px #FF00FF;
+}
+
+/* Enhanced selected state animations */
+.game-button.one.selected {
+  background: linear-gradient(45deg, #00FF87, #00B359);
+  animation: intenseGreenPulse 1.5s infinite;
+}
+
+.game-button.two.selected {
+  background: linear-gradient(45deg, #FF00FF, #FF1493);
+  animation: intensePinkPulse 1.5s infinite;
+}
+
+/* More intense pulse animations */
+@keyframes intenseGreenPulse {
+  0% {
+      box-shadow: 0 0 20px #00FF87;
+  }
+  50% {
+      box-shadow: 0 0 40px #00FF87, 0 0 60px #00FF87;
+  }
+  100% {
+      box-shadow: 0 0 20px #00FF87;
+  }
+}
+
+@keyframes intensePinkPulse {
+  0% {
+      box-shadow: 0 0 20px #FF00FF;
+  }
+  50% {
+      box-shadow: 0 0 40px #FF00FF, 0 0 60px #FF00FF;
+  }
+  100% {
+      box-shadow: 0 0 20px #FF00FF;
+  }
+}
+
+
+
+
+
+.cosmic-message {
+  animation: fadeInScale 0.5s ease-out;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes fadeInScale {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.winner {
+  animation: winPulse 1s infinite;
+}
+
+.loser {
+  animation: loseFade 1s forwards;
+}
+
+@keyframes winPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes loseFade {
+  to {
+      opacity: 0.6;
+      transform: scale(0.95);
+  }
+}
