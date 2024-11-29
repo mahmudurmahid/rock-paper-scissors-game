@@ -41,11 +41,45 @@
           </li>
           <li class="nav-item">
             <a class="nav-link glow-text" href="">Instructions</a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+              Launch instructions
+            </button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="instructionsModalLabel">How to play Cosmic Clash</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Players: The game is played between you and the PC.</p>
+          <p>Choices: The player selects one of five shapes by clicking on the icons: Rock, Paper, Scissors, Lizard, or
+            Spock.</p>
+          <p>Winning: The winner is determined based on the interactions listed below:
+            <ul>
+              <li>Rock crushes Scissors and Lizard.</li>
+              <li>Paper covers Rock and disproves Spock.</li>
+              <li>Scissors cuts Paper and decapitates Lizard.</li>
+              <li>Lizard eats Paper and poisons Spock.</li>
+              <li>Spock smashes Scissors and vaporizes Rock.</li>
+            </ul>
+          </p>
+          <p>Tie: If both players choose the same move, the game is a tie and score does not change.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Header -->
   <header class="cosmic-header">
@@ -104,6 +138,7 @@
         </div>
       </div>
     </section>
+
     <!--Scoreboard-->
     <section class="scoreboard container mt-3 text-center">
         <p>Wins: <span id="wins">0</span></p>
