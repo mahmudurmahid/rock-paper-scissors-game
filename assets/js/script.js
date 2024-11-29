@@ -176,3 +176,88 @@ const styles = `
 const styleSheet = document.createElement('style');
 styleSheet.textContent = styles;
 document.head.appendChild(styleSheet);
+
+
+
+
+
+
+// Add these variables at the beginning of your script
+let triesLeft = 5;
+const maxTries = 5;
+
+// Modify the handleImageClick function
+function handleImageClick(event) {
+    event.preventDefault();
+    
+    // Check if there are tries left
+    if (triesLeft <= 0) {
+        displayEndGameMessage();
+        return;
+    }
+    
+    const userChoice = event.currentTarget.querySelector('.card-title').textContent;
+    const computerChoice = getComputerChoice();
+    
+    // Get result and message
+    const result = determineWinner(userChoice, computerChoice);
+    const message = getResultMessage(result, userChoice, computerChoice);
+    
+    // Show choices and result with animation
+    displayResult(userChoice, computerChoice, message, result);
+    
+    // Decrease tries and update counter
+    triesLeft--;
+    updateTriesCounter();
+    
+    // Check if it's the last try
+    if (triesLeft === 0) {
+        setTimeout(displayEndGameMessage, 2000); // Display end game message after 2 seconds
+    }
+}
+
+// Add these new functions
+function updateTriesCounter() {
+    const triesLeftElement = document.getElementById('tries-left');
+    triesLeftElement.textContent = triesLeft;
+}
+
+function displayEndGameMessage() {
+    let resultContainer = document.getElementById('game-result');
+    if (!resultContainer) {
+        resultContainer = document.createElement('div');
+        resultContainer.id = 'game-result';
+        resultContainer.className = 'text-center mt-4';
+        document.querySelector('.game-cards').after(resultContainer);
+    }
+    
+    resultContainer.innerHTML = `
+        <div class="end-game-message animate__animated animate__fadeIn">
+            <h2>Celestial Dance Is Finalized!</h2>
+            <h4> Thank you For Illuminating The Void!</h4>
+        
+         </div>
+    `;
+    
+    // Add event listener to restart button
+    document.getElementById('restart-game').addEventListener('click', restartGame);
+}
+
+function restartGame() {
+    triesLeft = maxTries;
+    updateTriesCounter();
+    const resultContainer = document.getElementById('game-result');
+    if (resultContainer) {
+        resultContainer.innerHTML = '';
+    }
+}
+
+// Modify the DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', () => {
+    const gameCards = document.querySelectorAll('.game-card-hover');
+    gameCards.forEach(card => {
+        card.addEventListener('click', handleImageClick);
+    });
+    
+    updateTriesCounter(); // Initialize the tries counter
+});
