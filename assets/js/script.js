@@ -57,22 +57,25 @@ function getComputerChoice() {
 
 // Determine winner
 function determineWinner(userChoice, computerChoice) {
+    console.log('Rules:', rules);
+    console.log('User Choice:', userChoice);
+    console.log('Computer Choice:', computerChoice);
+
     if (userChoice === computerChoice) {
         return 'TIE';
     }
-    return rules[userChoice].includes(computerChoice) ? 'WIN' : 'LOOSE';
+    return rules[userChoice].includes(computerChoice) ? 'WIN' : 'LOSE';
 }
 
 // Get result message
 function getResultMessage(result, userChoice, computerChoice) {
     const messages = {
-        'WIN': `You Win! ${userChoice} beats ${computerChoice}!`,
-        'LOSE': `You Lose! ${computerChoice} beats ${userChoice}!`,
-        'TIE': `It's a Tie! Both chose ${userChoice}!`
+        'WIN': `You Have Saved The Universe! ${userChoice} beats ${computerChoice}!`,
+        'LOSE': `A Dark Alien Force Has Prevailed! ${computerChoice} beats ${userChoice}!`,
+        'TIE': `You Have achieved Cosmic Balance! Both chose ${userChoice}!`
     };
     return messages[result];
 }
-
 // Handle game card click
 function handleImageClick(event) {
     event.preventDefault();
