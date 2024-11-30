@@ -34,7 +34,10 @@ function handleImageClick() {
 
 
 
-
+//Score variables 
+let wins = 0;
+let losses = 0;
+let ties = 0;
 
 
 // Game choices
@@ -88,6 +91,9 @@ function handleImageClick(event) {
     
     // Show choices and result with animation
     displayResult(userChoice, computerChoice, message, result);
+
+    //Update the scoreboard after each round
+    updateScoreboard();
 }
 
 // Display result with animation
@@ -133,17 +139,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-//Update the scoreboard
-
-let wins = 0;
-let losses = 0;
-let ties = 0;
-
-function updateScoreBoard() {
-    document.getElementById('wins').textContent = wins; 
-    document.getElementById('losses').textContent = losses; 
+// Function to update the scoreboard
+function updateScoreboard() {
+    document.getElementById('wins').textContent = wins;
+    document.getElementById('losses').textContent = losses;
     document.getElementById('ties').textContent = ties;
 }
+
+// Function to reset the game and scores
+function resetGame() {
+    wins = 0;
+    losses = 0;
+    ties = 0;
+    updateScoreboard();
+}
+
+
+
 
 // Add required styles
 const styles = `
