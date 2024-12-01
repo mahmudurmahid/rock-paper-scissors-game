@@ -59,11 +59,9 @@ p {
   }
 }
 
-
 /*Nav Bar */
 
 #navbar {
-  
   font-family: "Zen Dots", sans-serif;
   color: white;
   font-size: 20px;
@@ -79,27 +77,24 @@ p {
 
 .nav-link {
   color: white;
-
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
   color: white;
 }
 
 .glow-text:hover {
   font-size: 1em;
   color: #fff; /* Text color */
-  text-shadow: 0 0 5px #fff, /* White glow */
-               0 0 10px #fff, /* Slightly larger white glow */
-               0 0 15px #fff, /* Even larger white glow */
-               0 0 20px #ff00ff, /* First colored glow (magenta) */
-               0 0 30px #0909b6, /* Larger magenta glow */
-               0 0 40px #2816c8, /* Even larger magenta glow */
-               0 0 50px #1e1ee1, /* Largest magenta glow */
-               0 0 60px #6f11ea; /* Largest magenta glow */
-
+  text-shadow: 0 0 5px #fff, /* White glow */ 0 0 10px #fff,
+    /* Slightly larger white glow */ 0 0 15px #fff,
+    /* Even larger white glow */ 0 0 20px #ff00ff,
+    /* First colored glow (magenta) */ 0 0 30px #0909b6,
+    /* Larger magenta glow */ 0 0 40px #2816c8,
+    /* Even larger magenta glow */ 0 0 50px #1e1ee1,
+    /* Largest magenta glow */ 0 0 60px #6f11ea; /* Largest magenta glow */
 }
-  
 
 /* Header Styes */
 .cosmic-header {
@@ -157,13 +152,7 @@ p {
 /* Hover effect for images */
 .game-cards .game-card-hover:hover {
   transform: scale(1.05);
-
 }
-
-
-
-
-
 
 .tries-counter {
   font-family: "Zen Dots", sans-serif;
@@ -190,13 +179,6 @@ p {
   background-color: #4e0fa6;
 }
 
-
-
-
-
-
-
-
 .tries-counter {
   font-family: "Zen Dots", sans-serif;
   color: white;
@@ -221,8 +203,6 @@ p {
 #restart-game:hover {
   background-color: none;
 }
-
-
 
 #restart-game {
   font-family: "Zen Dots", sans-serif;

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +27,8 @@
   <!-- Nebula Star Background -->
   <div class="nebula-background"></div>
   <div class="star"></div>
+
+
   <!--Navigation Bar-->
   <nav id="navbar" class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -81,12 +84,14 @@
     </div>
   </div>
 
+
   <!-- Header -->
   <header class="cosmic-header">
     <h1>Cosmic Clash</h1>
     <h4>A classic interstellar showdown of Rock, Paper, Scissors, Lizard, Spock!</h4>
   </header>
 
+  <!-- Main Content -->
   <main>
     <!-- Game Cards -->
     <section class="game-cards container my-5">
@@ -151,7 +156,51 @@
       <h2 class="pulse">Galactic Opportunities: <span id="tries-left">5</span></h2>
     </section>
 
+        <!-- End Game Modal -->
+        <div
+        class="modal fade"
+        id="endGameModal"
+        tabindex="-1"
+        aria-labelledby="endGameModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="endGameModalLabel">Game Over</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for playing Cosmic Clash!</p>
+              <p>Your final scores:</p>
+              <ul>
+                <li>Wins: <span id="final-wins">0</span></li>
+                <li>Losses: <span id="final-losses">0</span></li>
+                <li>Ties: <span id="final-ties">0</span></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="restart-game-btn"
+                data-bs-dismiss="modal"
+              >
+                Restart Game
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
   </main>
+
+
   <!--Footer with github profiles-->
   <footer id="contact" class="mt-auto">
     <div class="footer-icons d-flex justify-content-evenly">
