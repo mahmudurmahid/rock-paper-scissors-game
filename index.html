@@ -48,10 +48,6 @@
     <!-- Navigation Bar -->
     <nav id="navbar" class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <!-- New Game Button -->
-        <a class="btn btn-navbar glow-text ms-auto me-3" href="index.html"
-          >New Game</a
-        >
         <button
           class="navbar-toggler"
           type="button"
@@ -64,12 +60,18 @@
           <span><i class="fa-solid fa-bars"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul
+            class="navbar-nav ms-auto d-flex flex-column flex-lg-row justify-content-center align-items-center gap-2"
+          >
             <li class="nav-item">
-              <!-- Launch Instructions Button -->
+              <a class="nav-link btn btn-navbar glow-text" href="index.html">
+                New Game
+              </a>
+            </li>
+            <li class="nav-item">
               <button
                 type="button"
-                class="btn btn-navbar glow-text"
+                class="nav-link btn btn-navbar glow-text"
                 data-bs-toggle="modal"
                 data-bs-target="#instructionsModal"
               >
