@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,10 +42,7 @@
             <a class="nav-link active glow-text" aria-current="page" href="index.html">New Game</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link glow-text" href="">Instructions</a>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instructionsModal">
-              Launch instructions
-            </button>
+            <a class="nav-link glow-text" href="#" data-bs-toggle="modal" data-bs-target="#instructionsModal">Instructions</a>
           </li>
         </ul>
       </div>
@@ -131,9 +127,9 @@
 
     <!--Scoreboard-->
     <section class="scoreboard container mt-3 text-center">
-        <p>Wins: <span id="wins">0</span></p>
-        <p>Losses: <span id="losses">0</span></p>
-        <p>Ties: <span id="ties">0</span></p>
+      <p>Wins: <span id="wins">0</span></p>
+      <p>Losses: <span id="losses">0</span></p>
+      <p>Ties: <span id="ties">0</span></p>
     </section>
 
     <!-- Play Again and Instructions Buttons-->
@@ -149,47 +145,31 @@
       <h2 class="pulse">Galactic Opportunities: <span id="tries-left">5</span></h2>
     </section>
 
-        <!-- End Game Modal -->
-        <div
-        class="modal fade"
-        id="endGameModal"
-        tabindex="-1"
-        aria-labelledby="endGameModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="endGameModalLabel">Game Over</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>Thank you for playing Cosmic Clash!</p>
-              <p>Your final scores:</p>
-              <ul>
-                <li>Wins: <span id="final-wins">0</span></li>
-                <li>Losses: <span id="final-losses">0</span></li>
-                <li>Ties: <span id="final-ties">0</span></li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                id="restart-game-btn"
-                data-bs-dismiss="modal"
-              >
-                Restart Game
-              </button>
-            </div>
+    <!-- End Game Modal -->
+    <div class="modal fade" id="endGameModal" tabindex="-1" aria-labelledby="endGameModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="endGameModalLabel">Game Over</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Thank you for playing Cosmic Clash!</p>
+            <p>Your final scores:</p>
+            <ul>
+              <li>Wins: <span id="final-wins">0</span></li>
+              <li>Losses: <span id="final-losses">0</span></li>
+              <li>Ties: <span id="final-ties">0</span></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="restart-game-btn" data-bs-dismiss="modal">
+              Restart Game
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
   </main>
 
@@ -197,22 +177,14 @@
   <!--Footer with github profiles-->
   <footer id="contact" class="mt-auto">
     <div class="footer-icons d-flex justify-content-evenly">
-      <a href="https://github.com/phoebeW17" target="_blank"
-        aria-label="Visit phoebeW17's GitHub page (opens in a new tab)" rel="noopener"><i
-          class="fa-brands fa-github"></i> Phoebe</a>
-      <a href="https://github.com" target="_blank" aria-label="Visit Esther's GitHub page (opens in a new tab)"
-        rel="noopener"><i class="fa-brands fa-github"></i> Esther</a>
-      <a href="https://github.com" target="_blank" aria-label="Visit Mahmudur's GitHub page (opens in a new tab)"
-        rel="noopener"><i class="fa-brands fa-github"></i> Mahmudur</a>
+      <p>&copy; 2024 Cosmic Clash. All rights reserved.</p>
     </div>
   </footer>
 
 
   <!-- Bootstrap JS Link -->
-  <script>
-    src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity = "sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin = "anonymous"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
   <!--FontAwesome Kit Link-->
   <script src="https://kit.fontawesome.com/c03f260391.js" crossorigin="anonymous"></script>
