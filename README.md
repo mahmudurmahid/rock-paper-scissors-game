@@ -27,7 +27,7 @@ Cosmic Clash is an interactive static website which allows a user to play the ga
 * [Technologies Used](#technologies-used)
   * [Languages Used](#languages-used)
   * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
-  * [Use of AI](#AI)
+  * [Use of AI](#use-of-AI)
 
 * [Deployment & Local Development](#deployment--local-development)
   * [Deployment](#deployment)
@@ -207,8 +207,16 @@ Chat GPT was also used.
 
 MM used Copilot with this prompt to obtain card images: I am developing a rock, paper, scissors, lizard, spock game that is astronaut and space themed. I need 5 different images for each option (e.g. rock, lizard). Please provide 5 separate images, one for each option.
 
-
 </details>
+
+Evaluation of our AI usage: 
+
+My use of AI for images was very helpful. DALL E required a series of simple prompts about my website (e.g. space-themed rock, paper, scissors, lizard, spock game website) to create images. These images helped our group to decide color schemes too.
+The use of AI for debugging and coding was a mixed bag. It was very good at simple things like writing boiler plate code and creating bootstrap cards. However, less great at more complex problems (e.g. creating a win/loss/draw scoreboard feature functionality). I imagine with. better prompts from my end in terms of wording or a higher number of prompts it could have improved on these tasks. - MM
+
+I utilised Co-pilot to assist me with styling queries which was very useful as I was able to use the code and add the class names speeding up the process of styling. It was extremely useful in pointing out issues within the code, pinpointing the issue with the Bootstrap JS link. Due to tech issues I did not use Github co-pilot, however I felt that co-pilot in the browser helped me more and I feel it is less intrusive. - PW
+
+The hackathon showcased AI's transformative impact on development workflows. I leveraged AI-powered design tools to rapidly prototype user interfaces and generate responsive layouts, significantly accelerating the UX/UI design process. On the debugging front, AI code analysis tools helped identify potential issues early. This integration of AI not only reduced development time but also enabled me and my colleagues to focus more on innovative features rather than technical debugging, resulting in higher quality project submissions. - EK
 
 ## Deployment & Local Development
 
@@ -260,10 +268,11 @@ We have used Lighthouse to check the performance of the site.
 
 <details>
 <summary>W3C Validator</summary>
+<p>Site validation: passed. The screenshots below highlight the warnings that occurred with the validation of the html and css pages.<p>
 <br>
 
-![HTML](#)
-![CSS](#)
+![HTML](readme/ValidatorWarning.png)
+![CSS](readme/ValidatorCSS.png)
 
 </details>
 
