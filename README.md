@@ -65,7 +65,7 @@ As a user, I want to play against a computer opponent so that I have a challengi
 
 As a user, I want clear instructions on how to play so that I can understand the rules and enjoy the game.
 
-##As a user, I want a reset button so that I can start the game over at any time.
+## As a user, I want a reset button so that I can start the game over at any time.
 
 Acceptance Criteria
 
@@ -141,7 +141,7 @@ Documentation
 Update the game's user manual or help section to include information about the reset feature.
 Document the reset functionality in the codebase for future maintenance.
 
-##As a user, I want a clear end-game message so that I know when the game is over.
+## As a user, I want a clear end-game message so that I know when the game is over.
 
 Acceptance Criteria
 
