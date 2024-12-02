@@ -24,9 +24,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Game Card Components
-function handleImageClick() {
-  alert("Image button clicked!");
-  // Add your desired action here, such as navigation
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all game cards and add click event listeners
+  const gameCards = document.querySelectorAll(".game-card-hover");
+  gameCards.forEach((card) => {
+    card.addEventListener("click", handleImageClick);
+  });
+});
+
+function handleImageClick(event) {
+  event.preventDefault(); // Prevent default behavior, if any
+  const userChoice =
+    event.currentTarget.querySelector(".card-title").textContent;
+  console.log("User choice:", userChoice);
+  // BUG FIX: previous onclick did not work on deployed site
 }
 
 //Score variables
