@@ -142,6 +142,10 @@ p {
 }
 
 /* Results Message Styling */
+#game-result {
+  margin-bottom: 0;
+}
+
 #game-result h2 {
   font-size: 1rem;
   font-weight: bold;
@@ -156,7 +160,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin: 0;
 }
 
 /* Container for all cards */
@@ -260,6 +264,13 @@ p {
 }
 
 /* Scoreboard Styling */
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
 .scoreboard p {
   font-family: "Exo", sans-serif;
   font-size: 1.2rem;
