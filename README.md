@@ -67,13 +67,14 @@ As a user, I want clear instructions on how to play so that I can understand the
 
 ## As a user, I want a reset button so that I can start the game over at any time.
 
-Acceptance Criteria
+# Acceptance Criteria
 
-Reset Button Visibility
+# Reset Button Visibility
 
 The "Reset Game" button is clearly visible and accessible on the game interface at all times.
 The button is labeled "Reset Game" or uses a universally recognized reset icon.
-Reset Functionality
+
+# Reset Functionality
 
 Clicking the "Reset Game" button resets the following elements:
 Scoreboard (all player scores return to zero)
@@ -81,140 +82,140 @@ Round counter (returns to the initial round)
 All UI elements (game board, player indicators, etc.) return to their initial state
 Any ongoing game processes are immediately terminated upon reset.
 
-Confirmation Prompt
+# Confirmation Prompt
 
 A confirmation prompt appears before the game is reset.
 The prompt clearly warns the player that all progress will be lost.
 The prompt offers "Confirm" and "Cancel" options.
 
-Reset Behavior
+# Reset Behavior
 
 If the player confirms the reset, the game immediately resets to its initial state.
 If the player cancels, the game continues from its current state without any changes.
 
-Performance
+# Performance
 
 The reset process completes within 2 seconds of confirmation.
 
-Accessibility
+# Accessibility
 
 The reset button is keyboard accessible.
 Screen readers can interpret and announce the reset button and confirmation prompt.
 
-Tasks
+# Tasks
 
 UI Design and Implementation
 Design the "Reset Game" button with appropriate styling.
 Add the button to the game interface in a prominent, easily accessible location.
 Ensure the button is responsive and works on various screen sizes.
 
-JavaScript Functionality
+# JavaScript Functionality
 
 Write a function to reset all game variables (scores, rounds, etc.) to their initial values.
 Implement logic to reset all UI elements to their starting state.
 Create an event listener for the reset button click.
 
-Confirmation Modal
+# Confirmation Modal
 
 Design and implement a confirmation modal or prompt.
 Write JavaScript to display the modal when the reset button is clicked.
 Implement logic to proceed with reset only if confirmed.
 
-Reset Process
+# Reset Process
 
 Develop the main reset function that calls all necessary sub-functions to completely reset the game.
 Optimize the reset process to complete within the 2-second performance requirement.
 
-Testing
+# Testing
 
 Create unit tests for the reset functionality.
 Perform integration testing to ensure all game components reset correctly.
 Conduct user acceptance testing to verify the reset feature meets player expectations.
 
-Accessibility Implementation
+# Accessibility Implementation
 
 Add appropriate ARIA labels and roles to the reset button and confirmation modal.
 Test with screen readers and keyboard navigation to ensure accessibility compliance.
 
-Documentation
+# Documentation
 
 Update the game's user manual or help section to include information about the reset feature.
 Document the reset functionality in the codebase for future maintenance.
 
 ## As a user, I want a clear end-game message so that I know when the game is over.
 
-Acceptance Criteria
+# Acceptance Criteria
 
-Message Display
+# Message Display
 
 A prominent "Game Over" message is displayed when the game ends.
 The message includes the player's final score (e.g., "Game Over! Your score: X").
 The message appears immediately upon game completion, without any delay.
 
-Visual Design
+# Visual Design
 
 The end-game message matches the space theme of the game.
 The message is visually distinct from other game elements, ensuring it captures the player's attention.
 Text is easily readable against the background.
 
-Message Content
+# Message Content
 
 The message clearly states that the game has ended.
 The player's final score is prominently displayed.
 Additional statistics or achievements may be included if relevant to the game.
 
-Play Again Option
+# Play Again Option
 
 A "Play Again" button is included within the end-game message.
 Clicking the "Play Again" button resets the game and starts a new session.
 
-Accessibility
+# Accessibility
 
 The end-game message is accessible to screen readers.
 The message and "Play Again" button are keyboard navigable.
 
-Tasks
+# Tasks
 
 Implement End-Game Detection
 Write JavaScript function to detect when the game ends (e.g., when number of tries reaches zero).
 Ensure this function is called at appropriate points in the game logic.
 
-Create End-Game Message
+# Create End-Game Message
 
 Design the layout and content of the end-game message.
 Implement HTML structure for the message, including placeholders for dynamic content (e.g., score).
 
-Style the Message
+# Style the Message
 
 Create CSS styles for the end-game message that align with the space theme.
 Ensure the message stands out visually from the game background.
 Implement responsive design to ensure the message displays correctly on various screen sizes.
 
-Implement Message Display Logic
+# Implement Message Display Logic
 
 Write JavaScript function to show the end-game message.
 Include logic to populate the message with the player's final score.
 Ensure the message appears immediately when the game ends.
 
-Add Play Again Functionality
+# Add Play Again Functionality
 
 Design and implement a "Play Again" button within the message.
 Write JavaScript to handle the button click event, resetting the game state.
 Ensure the button is styled consistently with the space theme.
 
-Enhance Accessibility
+# Enhance Accessibility
 
 Add appropriate ARIA labels to the end-game message and "Play Again" button.
 Ensure the message can be navigated and activated using keyboard controls.
 Test with screen readers to verify accessibility.
 
-Testing
+# Testing
 
 Conduct thorough testing to ensure the end-game message appears correctly in all game-ending scenarios.
 Test the "Play Again" functionality to verify it properly resets the game.
 Perform cross-browser and cross-device testing to ensure consistent behavior.
 
-Performance Optimization
+# Performance Optimization
 
 Optimize the end-game message display to ensure it doesn't impact game performance.
 Minimize any potential lag between game end and message display.
