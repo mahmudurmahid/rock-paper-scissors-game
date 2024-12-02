@@ -163,14 +163,11 @@ p {
 
 /* Styling for individual cards */
 .game-cards .card {
-  width: 5rem;
-  /* Fixed width */
+  width: 5rem; /* Fixed width */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  /* Smooth corners */
-  background: transparent;
-  /* Fully transparent card background */
+  border-radius: 8px; /* Smooth corners */
+  background: transparent; /* Fully transparent card background */
 }
 
 .game-cards .card-body {
@@ -319,6 +316,7 @@ p {
   transform: scale(0.95); /* Shrink slightly on click */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Responsiveness Styling */
 // Responsivity Styling
