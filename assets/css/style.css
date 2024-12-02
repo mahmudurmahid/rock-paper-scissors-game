@@ -282,3 +282,10 @@ p {
   border-radius: 5px;
 }
 
+/* General styles for the game cards */
+.game-card-hover {
+  width: 8rem;
+  margin: 0.5rem;
+}
+
+
