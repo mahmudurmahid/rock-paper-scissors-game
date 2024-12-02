@@ -4,6 +4,8 @@ Cosmic Clash is an interactive static website which allows a user to play the ga
 
 [Cosmic Clash Live Site](https://mahmudurmahid.github.io/rock-paper-scissors-game/)
 
+![Am I responsive](readme/am%20i%20resp.png)
+
 ---
 
 ## CONTENTS
@@ -157,11 +159,11 @@ Yes, aria-labels have been used throughout the html.
 
 Have you ensured your site meets the minimum contrast requirements?
 
-
+Yes
 
 Have you chosen fonts that are dyslexia/accessible friendly?
 
-
+Yes
 
 ## Technologies Used
 
@@ -203,6 +205,8 @@ Chat GPT was also used.
 
 [Example of Copilot aiding PW with CSS styling](readme/glowing.png)
 
+MM used Copilot with this prompt to obtain card images: I am developing a rock, paper, scissors, lizard, spock game that is astronaut and space themed. I need 5 different images for each option (e.g. rock, lizard). Please provide 5 separate images, one for each option.
+
 
 </details>
 
@@ -241,7 +245,92 @@ To clone the Rock-paper-scissors-game repository:
 
 ## Testing
 
-Please view [Testing.md](/workspace/rock-paper-scissors-game/TESTING.md) for testing documentation. 
+We utilised Google Developer Tools as part of the ongoing testing of the site, allowing us to troubleshoot and pinpoint issues.
+
+We have used the W3 Validator to test the html and css used on our site.
+
+Jshint was used to validate the Javascript used. 
+
+We have used WAVE to test the accessibility of our site. 
+
+We have used Lighthouse to check the performance of the site. 
+
+
+### Automated Testing 
+
+<details>
+<summary>W3C Validator</summary>
+<br>
+
+![HTML](#)
+![CSS](#)
+
+</details>
+
+<details>
+<summary>JS Hint</summary>
+<br>
+
+![JS Hint](readme/js%20hint.png)
+
+</details>
+
+<details>
+<summary>WAVE</summary>
+<br>
+
+![Wave](readme/wave.png)
+
+</details>
+
+<details>
+<summary>Lighthouse</summary>
+<br>
+
+![Lighthouse mob](readme/mob%20lighth.png)
+![Lighthouse desktop](readme/lighth%20desk.png)
+
+
+</details>
+
+### Manual Testing 
+
+### Testing User Stories 
+
+![User Story testing](readme/user%20story%20testing.png)
+
+
+
+### Full Testing 
+
+Full testing was performed on an iPhone X, iPad Air 2020, windows HP laptop.
+
+Each device used the following browsers: 
+
+IOS Safari, Google Chrome
+
+MVP achieved on all devices. 
+
+Other comments: 
+
+All features work on iPhone/safari
+
+All features work on PC/Google chrome
+
+
+### Bugs 
+
+### Known Bugs
+
+| Known Bug No | Bug Issue | Plan to Resolve |
+| :--- | :--- | :--- |
+| - |   |  |
+
+### Solved Bugs
+
+| Bug No | Bug Issue | How Resolved |
+| :--- | :--- | :--- |
+| 1 | The background affecting our ability to click onto cards and other buttons | The fix was z-index and pointer events |
 
 ## Credits
 
@@ -253,6 +342,12 @@ Please view [Testing.md](/workspace/rock-paper-scissors-game/TESTING.md) for tes
 
 We utilised AI to create the text within the page and modal. 
 
+Code was used from this YouTube sources: 
+
+- (https://www.youtube.com/watch?v=jaVNP3nIAv0&t=179s)
+- (https://www.youtube.com/watch?v=3uKdQx-SZ5A)
+
+
 ReadMe: 
 
 [ReadMe Template](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md)
@@ -260,8 +355,8 @@ ReadMe:
 
 ###  Media
 
-If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
-  
+Media was produced via Dall-E.
+
 ###  Acknowledgments
 
 Amy Richardson - our Bootcamp group facilitator, thank you for your constant positive energy and feedback!
