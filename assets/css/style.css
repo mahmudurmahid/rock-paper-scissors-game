@@ -172,8 +172,17 @@ p {
 }
 
 /* Styling for individual cards */
+.game-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
 .game-cards .card {
-  width: 5rem; /* Fixed width */
+  width: 10rem; /* Fixed width */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px; /* Smooth corners */
@@ -199,7 +208,6 @@ p {
   transition: transform 0.3s ease;
 }
 
-/* Hover effect for images */
 .game-cards .game-card-hover:hover {
   transform: scale(1.05);
 }
