@@ -105,6 +105,44 @@ function handleCardClick(event) {
   if (triesLeft === 0) alert("Game Over!");
 }
 
+// Show End Game Modal
+function showEndGameModal() {
+  const endGameMessage = `
+    Galactic Opportunities Exhausted! Here's your final score:
+    Wins: ${wins}, Losses: ${losses}, Ties: ${ties}.
+  `;
+  document.getElementById("end-game-message").textContent = endGameMessage;
+
+  const endGameModal = new bootstrap.Modal(
+    document.getElementById("endGameModal")
+  );
+  endGameModal.show();
+}
+
+function handleCardClick(event) {
+  if (triesLeft === 0) return;
+
+  const userChoice =
+    event.currentTarget.querySelector(".card-title").textContent;
+  const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+  const result = determineWinner(userChoice, computerChoice);
+
+  if (result === "WIN") wins++;
+  if (result === "LOSE") losses++;
+  if (result === "TIE") ties++;
+
+  triesLeft--;
+  displayResult(userChoice, computerChoice, result);
+  updateScoreboard();
+
+  if (triesLeft === 0) showEndGameModal(); // Trigger modal when triesLeft is 0
+}
+
+// Play Again Button in Modal
+document
+  .getElementById("play-again-modal-btn")
+  .addEventListener("click", resetGame);
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
   generateStars();

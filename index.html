@@ -229,11 +229,63 @@
       <div class="text-center mt-4">
         <button id="play-again-btn" class="btn btn-success">Play Again</button>
       </div>
+
+      <!-- End Game Modal -->
+      <div
+        class="modal fade"
+        id="endGameModal"
+        tabindex="-1"
+        aria-labelledby="endGameModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-center">
+            <div class="modal-header">
+              <h5 class="modal-title" id="endGameModalLabel">Game Over!</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p id="end-game-message" class="end-game-message">
+                Thank you for playing Cosmic Clash!
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                id="play-again-modal-btn"
+                type="button"
+                class="btn btn-success"
+                data-bs-dismiss="modal"
+              >
+                Play Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer id="contact" class="mt-auto">
       <div class="footer-icons d-flex justify-content-evenly">
+        <a
+          href="https://github.com/mahmudurmahid"
+          target="_blank"
+          aria-label="Phoebe's GitHub"
+        >
+          <i class="fa-brands fa-github"></i> Mahmudur
+        </a>
+        <a
+          href="https://github.com/EssBuilds"
+          target="_blank"
+          aria-label="Phoebe's GitHub"
+        >
+          <i class="fa-brands fa-github"></i> Esther
+        </a>
         <a
           href="https://github.com/phoebeW17"
           target="_blank"
