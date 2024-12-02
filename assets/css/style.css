@@ -83,7 +83,7 @@ p {
   transform: scale(1.05);
 }
 
-/*Modal*/
+/* Instructions Modal*/
 .modal-content {
   color: white;
   /* Text color */
@@ -102,6 +102,25 @@ p {
   color: white;
 }
 
+.modal-footer .btn-secondary {
+  font-family: "Zen Dots", sans-serif;
+  background-color: #e8770e;
+  color: white;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #c5660c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-footer .btn-secondary:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 /* Header Styes */
 .cosmic-header {
