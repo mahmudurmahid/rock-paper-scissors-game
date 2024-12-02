@@ -141,6 +141,15 @@ p {
   margin: 0;
 }
 
+/* Results Message Styling */
+#game-result h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+
 /* Game Card Components */
 .game-cards {
   display: flex;
@@ -313,6 +322,8 @@ p {
   transform: scale(0.95); /* Shrink slightly on click */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
 
 
 /* Responsiveness Styling */

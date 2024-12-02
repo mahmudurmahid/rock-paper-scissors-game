@@ -50,11 +50,11 @@ function displayResult(userChoice, computerChoice, result) {
   const resultHTML = `
     <div class="choices-container d-flex justify-content-center gap-5 mb-3">
       <div>
-        <h3>You chose:</h3>
+        <h4>You chose:</h4>
         <img src="assets/images/${userChoice.toLowerCase()}.webp" alt="${userChoice}" style="width: 100px;">
       </div>
       <div>
-        <h3>Computer chose:</h3>
+        <h4>Computer chose:</h4>
         <img src="assets/images/${computerChoice.toLowerCase()}.webp" alt="${computerChoice}" style="width: 100px;">
       </div>
     </div>
