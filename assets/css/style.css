@@ -131,6 +131,17 @@ p {
   align-items: center;
   text-align: center;
   background: rgba(101, 19, 215, 0.25);
+  margin: 0;
+}
+
+.cosmic-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.cosmic-header p {
+  font-size: 0.75rem;
+  margin: 0;
 }
 
 /* Game Card Components */
@@ -309,3 +320,30 @@ p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Responsiveness Styling */
+// Responsivity Styling
+/* Adjust header font sizes for smaller screens */
+@media (max-width: 768px) {
+  .cosmic-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .cosmic-header p {
+    font-size: 0.9rem;
+  }
+
+  .tries-counter h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Reduce padding and margins for smaller screens */
+@media (max-width: 576px) {
+  .game-cards .card {
+    width: 4rem; /* Smaller card size */
+  }
+
+  .scoreboard p {
+    font-size: 1rem;
+  }
+}
