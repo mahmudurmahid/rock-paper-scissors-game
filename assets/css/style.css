@@ -309,3 +309,10 @@ p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* General styles for the game cards */
+.game-card-hover {
+  width: 8rem;
+  margin: 0.5rem;
+}
+
+
