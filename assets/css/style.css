@@ -102,6 +102,7 @@ p {
   color: white;
 }
 
+/* Instructions Modal Close Button */
 .modal-footer .btn-secondary {
   font-family: "Zen Dots", sans-serif;
   background-color: #e8770e;
@@ -225,26 +226,6 @@ p {
   color: white;
 }
 
-#restart-game {
-  font-family: "Zen Dots", sans-serif;
-  background-color: none;
-  border: none;
-}
-
-#restart-game:hover {
-  background-color: none;
-}
-
-#restart-game {
-  font-family: "Zen Dots", sans-serif;
-  background-color: none;
-  border: none;
-}
-
-#restart-game:hover {
-  background-color: none;
-}
-
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -262,6 +243,15 @@ p {
 .pulse {
   animation: pulse 2s infinite;
 
+}
+
+/* Scoreboard Styling */
+.scoreboard p {
+  font-family: "Exo", sans-serif;
+  font-size: 1.2rem;
+  margin: 0; /* Remove default margin */
+  padding: 0.5rem;
+  color: white; /* Text color */
 }
 
 /* Play Again Button Styling */

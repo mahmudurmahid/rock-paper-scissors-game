@@ -148,6 +148,9 @@
 
     <!-- Main Game Area -->
     <main>
+      <!-- Result Display -->
+      <section id="game-result" class="container text-center mt-3"></section>
+
       <!-- Game Cards -->
       <section class="game-cards container my-5">
         <div
@@ -206,11 +209,10 @@
         </div>
       </section>
 
-      <!-- Result Display -->
-      <section id="game-result" class="container text-center mt-3"></section>
-
       <!-- Scoreboard -->
-      <section class="scoreboard container mt-3 text-center">
+      <section
+        class="scoreboard container mt-3 text-center d-flex justify-content-center gap-3"
+      >
         <p>Wins: <span id="wins">0</span></p>
         <p>Losses: <span id="losses">0</span></p>
         <p>Ties: <span id="ties">0</span></p>
