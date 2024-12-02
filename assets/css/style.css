@@ -18,6 +18,11 @@ p {
 }
 
 /* Background Image & Shooting Star Effect */
+.nebula-background,
+.star {
+  pointer-events: none;
+} /* BUG FIX: Enables all  */
+
 .nebula-background {
   position: fixed;
   top: 0;
@@ -28,7 +33,7 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -2;
 }
 
 .star {
@@ -36,7 +41,7 @@ p {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0;
+  z-index: -1;
 }
 
 .shooting-star {
@@ -60,7 +65,6 @@ p {
 }
 
 /*Nav Bar */
-
 #navbar {
   font-family: "Zen Dots", sans-serif;
   color: white;
@@ -228,4 +232,11 @@ p {
 
 .pulse {
   animation: pulse 2s infinite;
+}
+
+#game-controls button {
+  font: "Zen Dots", sans-serif;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
 }

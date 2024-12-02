@@ -29,86 +29,81 @@ function handleImageClick() {
   // Add your desired action here, such as navigation
 }
 
-
-
-
-
-
-//Score variables 
+//Score variables
 let wins = 0;
 let losses = 0;
 let ties = 0;
 
-
 // Game choices
-const choices = ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK'];
+const choices = ["ROCK", "PAPER", "SCISSORS", "LIZARD", "SPOCK"];
 
 // Game rules defining what beats what
 const rules = {
-    'ROCK': ['SCISSORS', 'LIZARD'],
-    'PAPER': ['ROCK', 'SPOCK'],
-    'SCISSORS': ['PAPER', 'LIZARD'],
-    'LIZARD': ['PAPER', 'SPOCK'],
-    'SPOCK': ['ROCK', 'SCISSORS']
+  ROCK: ["SCISSORS", "LIZARD"],
+  PAPER: ["ROCK", "SPOCK"],
+  SCISSORS: ["PAPER", "LIZARD"],
+  LIZARD: ["PAPER", "SPOCK"],
+  SPOCK: ["ROCK", "SCISSORS"],
 };
 
 // Get computer choice
 function getComputerChoice() {
-    const randomIndex = Math.floor(Math.random() * choices.length);
-    return choices[randomIndex];
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
 }
 
 // Determine winner
 function determineWinner(userChoice, computerChoice) {
-    console.log('Rules:', rules);
-    console.log('User Choice:', userChoice);
-    console.log('Computer Choice:', computerChoice);
+  console.log("Rules:", rules);
+  console.log("User Choice:", userChoice);
+  console.log("Computer Choice:", computerChoice);
 
-    if (userChoice === computerChoice) {
-        return 'TIE';
-    }
-    return rules[userChoice].includes(computerChoice) ? 'WIN' : 'LOSE';
+  if (userChoice === computerChoice) {
+    return "TIE";
+  }
+  return rules[userChoice].includes(computerChoice) ? "WIN" : "LOSE";
 }
 
 // Get result message
 function getResultMessage(result, userChoice, computerChoice) {
-    const messages = {
-        'WIN': `You Have Saved The Universe! ${userChoice} beats ${computerChoice}!`,
-        'LOSE': `A Dark Alien Force Has Prevailed! ${computerChoice} beats ${userChoice}!`,
-        'TIE': `You Have achieved Cosmic Balance! Both chose ${userChoice}!`
-    };
-    return messages[result];
+  const messages = {
+    WIN: `You Have Saved The Universe! ${userChoice} beats ${computerChoice}!`,
+    LOSE: `A Dark Alien Force Has Prevailed! ${computerChoice} beats ${userChoice}!`,
+    TIE: `You Have achieved Cosmic Balance! Both chose ${userChoice}!`,
+  };
+  return messages[result];
 }
 // Handle game card click
 function handleImageClick(event) {
-    event.preventDefault();
-    const userChoice = event.currentTarget.querySelector('.card-title').textContent;
-    const computerChoice = getComputerChoice();
-    
-    // Get result and message
-    const result = determineWinner(userChoice, computerChoice);
-    const message = getResultMessage(result, userChoice, computerChoice);
-    
-    // Show choices and result with animation
-    displayResult(userChoice, computerChoice, message, result);
+  event.preventDefault();
+  const userChoice =
+    event.currentTarget.querySelector(".card-title").textContent;
+  const computerChoice = getComputerChoice();
 
-    //Update the scoreboard after each round
-    updateScoreboard();
+  // Get result and message
+  const result = determineWinner(userChoice, computerChoice);
+  const message = getResultMessage(result, userChoice, computerChoice);
+
+  // Show choices and result with animation
+  displayResult(userChoice, computerChoice, message, result);
+
+  //Update the scoreboard after each round
+  updateScoreboard();
 }
 
 // Display result with animation
 function displayResult(userChoice, computerChoice, message, result) {
-    // Create or get result container
-    let resultContainer = document.getElementById('game-result');
-    if (!resultContainer) {
-        resultContainer = document.createElement('div');
-        resultContainer.id = 'game-result';
-        resultContainer.className = 'text-center mt-4';
-        document.querySelector('.game-cards').after(resultContainer);
-    }
-    
-    // Update result content with animation
-    resultContainer.innerHTML = `
+  // Create or get result container
+  let resultContainer = document.getElementById("game-result");
+  if (!resultContainer) {
+    resultContainer = document.createElement("div");
+    resultContainer.id = "game-result";
+    resultContainer.className = "text-center mt-4";
+    document.querySelector(".game-cards").after(resultContainer);
+  }
+
+  // Update result content with animation
+  resultContainer.innerHTML = `
         <div class="choices-container d-flex justify-content-center gap-5 mb-3">
             <div class="player-choice">
                 <h3>You chose:</h3>
@@ -132,30 +127,27 @@ function displayResult(userChoice, computerChoice, message, result) {
 }
 
 // Add click event listeners to all game cards
-document.addEventListener('DOMContentLoaded', () => {
-    const gameCards = document.querySelectorAll('.game-card-hover');
-    gameCards.forEach(card => {
-        card.addEventListener('click', handleImageClick);
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const gameCards = document.querySelectorAll(".game-card-hover");
+  gameCards.forEach((card) => {
+    card.addEventListener("click", handleImageClick);
+  });
 });
 
 // Function to update the scoreboard
 function updateScoreboard() {
-    document.getElementById('wins').textContent = wins;
-    document.getElementById('losses').textContent = losses;
-    document.getElementById('ties').textContent = ties;
+  document.getElementById("wins").textContent = wins;
+  document.getElementById("losses").textContent = losses;
+  document.getElementById("ties").textContent = ties;
 }
 
 // Function to reset the game and scores
 function resetGame() {
-    wins = 0;
-    losses = 0;
-    ties = 0;
-    updateScoreboard();
+  wins = 0;
+  losses = 0;
+  ties = 0;
+  updateScoreboard();
 }
-
-
-
 
 // Add required styles
 const styles = `
@@ -197,14 +189,9 @@ const styles = `
 `;
 
 // Add styles to document
-const styleSheet = document.createElement('style');
+const styleSheet = document.createElement("style");
 styleSheet.textContent = styles;
 document.head.appendChild(styleSheet);
-
-
-
-
-
 
 // Add these variables at the beginning of your script
 let triesLeft = 5;
@@ -212,76 +199,98 @@ const maxTries = 5;
 
 // Modify the handleImageClick function
 function handleImageClick(event) {
-    event.preventDefault();
-    
-    // Check if there are tries left
-    if (triesLeft <= 0) {
-        displayEndGameMessage();
-        return;
-    }
-    
-    const userChoice = event.currentTarget.querySelector('.card-title').textContent;
-    const computerChoice = getComputerChoice();
-    
-    // Get result and message
-    const result = determineWinner(userChoice, computerChoice);
-    const message = getResultMessage(result, userChoice, computerChoice);
-    
-    // Show choices and result with animation
-    displayResult(userChoice, computerChoice, message, result);
-    
-    // Decrease tries and update counter
-    triesLeft--;
-    updateTriesCounter();
-    
-    // Check if it's the last try
-    if (triesLeft === 0) {
-        setTimeout(displayEndGameMessage, 2000); // Display end game message after 2 seconds
-    }
+  event.preventDefault();
+
+  // Check if there are tries left
+  if (triesLeft <= 0) {
+    displayEndGameMessage();
+    return;
+  }
+
+  const userChoice =
+    event.currentTarget.querySelector(".card-title").textContent;
+  const computerChoice = getComputerChoice();
+
+  // Get result and message
+  const result = determineWinner(userChoice, computerChoice);
+  const message = getResultMessage(result, userChoice, computerChoice);
+
+  // Show choices and result with animation
+  displayResult(userChoice, computerChoice, message, result);
+
+  // Decrease tries and update counter
+  triesLeft--;
+  updateTriesCounter();
+
+  // Check if it's the last try
+  if (triesLeft === 0) {
+    setTimeout(displayEndGameMessage, 2000); // Display end game message after 2 seconds
+  }
 }
 
 // Add these new functions
 function updateTriesCounter() {
-    const triesLeftElement = document.getElementById('tries-left');
-    triesLeftElement.textContent = triesLeft;
+  const triesLeftElement = document.getElementById("tries-left");
+  triesLeftElement.textContent = triesLeft;
 }
 
 function displayEndGameMessage() {
-    let resultContainer = document.getElementById('game-result');
-    if (!resultContainer) {
-        resultContainer = document.createElement('div');
-        resultContainer.id = 'game-result';
-        resultContainer.className = 'text-center mt-4';
-        document.querySelector('.game-cards').after(resultContainer);
-    }
-    
-    resultContainer.innerHTML = `
+  let resultContainer = document.getElementById("game-result");
+  if (!resultContainer) {
+    resultContainer = document.createElement("div");
+    resultContainer.id = "game-result";
+    resultContainer.className = "text-center mt-4";
+    document.querySelector(".game-cards").after(resultContainer);
+  }
+
+  resultContainer.innerHTML = `
         <div class="end-game-message animate__animated animate__fadeIn">
             <h2>Celestial Dance Is Finalized!</h2>
             <h4> Thank you For Illuminating The Void!</h4>
         
          </div>
     `;
-    
-    // Add event listener to restart button
-    document.getElementById('restart-game').addEventListener('click', restartGame);
+
+  // Add event listener to restart button
+  document
+    .getElementById("restart-game")
+    .addEventListener("click", restartGame);
 }
 
 function restartGame() {
-    triesLeft = maxTries;
-    updateTriesCounter();
-    const resultContainer = document.getElementById('game-result');
-    if (resultContainer) {
-        resultContainer.innerHTML = '';
-    }
+  triesLeft = maxTries;
+  updateTriesCounter();
+  const resultContainer = document.getElementById("game-result");
+  if (resultContainer) {
+    resultContainer.innerHTML = "";
+  }
 }
 
 // Modify the DOMContentLoaded event listener
-document.addEventListener('DOMContentLoaded', () => {
-    const gameCards = document.querySelectorAll('.game-card-hover');
-    gameCards.forEach(card => {
-        card.addEventListener('click', handleImageClick);
+document.addEventListener("DOMContentLoaded", () => {
+  const gameCards = document.querySelectorAll(".game-card-hover");
+  gameCards.forEach((card) => {
+    card.addEventListener("click", handleImageClick);
+  });
+
+  updateTriesCounter(); // Initialize the tries counter
+});
+
+// Play Again Button
+document.addEventListener("DOMContentLoaded", () => {
+  const playAgainButton = document.getElementById("play-again-btn");
+  if (playAgainButton) {
+    playAgainButton.addEventListener("click", () => {
+      restartGame(); // Restart the game using the existing function
+      const resultContainer = document.getElementById("game-result");
+      if (resultContainer) {
+        resultContainer.innerHTML = ""; // Clear the result section
+      }
+      triesLeft = maxTries;
+      updateTriesCounter();
+      updateScoreboard();
     });
-    
-    updateTriesCounter(); // Initialize the tries counter
+  } else {
+    console.error("Play Again button not found in the DOM!");
+  }
 });
