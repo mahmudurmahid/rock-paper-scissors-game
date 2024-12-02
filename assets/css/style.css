@@ -334,6 +334,11 @@ p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+}
 
 
 
