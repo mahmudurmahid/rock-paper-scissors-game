@@ -92,47 +92,32 @@
     <!-- Game Cards -->
     <section class="game-cards container my-5">
       <div class="d-flex flex-row flex-wrap justify-content-center align-items-stretch gap-3">
-        <!-- Card 1: Rock -->
         <div class="card text-center game-card-hover" style="width: 8rem;">
-          <a href="#" onclick="handleImageClick()" style="display: block;">
-            <img src="assets/images/rock.webp" class="card-img-top" alt="Rock">
-          </a>
+          <img src="assets/images/rock.webp" class="card-img-top" alt="Rock">
           <div class="card-body">
             <h5 class="card-title">ROCK</h5>
           </div>
         </div>
-        <!-- Card 2: Paper -->
         <div class="card text-center game-card-hover" style="width: 8rem;">
-          <a href="#" onclick="handleImageClick()" style="display: block;">
-            <img src="assets/images/paper.webp" class="card-img-top" alt="Paper">
-          </a>
+          <img src="assets/images/paper.webp" class="card-img-top" alt="Paper">
           <div class="card-body">
             <h5 class="card-title">PAPER</h5>
           </div>
         </div>
-        <!-- Card 3: Scissors -->
         <div class="card text-center game-card-hover" style="width: 8rem;">
-          <a href="#" onclick="handleImageClick()" style="display: block;">
-            <img src="assets/images/scissors.webp" class="card-img-top" alt="Scissors">
-          </a>
+          <img src="assets/images/scissors.webp" class="card-img-top" alt="Scissors">
           <div class="card-body">
             <h5 class="card-title">SCISSORS</h5>
           </div>
         </div>
-        <!-- Card 4: Lizard -->
         <div class="card text-center game-card-hover" style="width: 8rem;">
-          <a href="#" onclick="handleImageClick()" style="display: block;">
-            <img src="assets/images/lizard.webp" class="card-img-top" alt="Lizard">
-          </a>
+          <img src="assets/images/lizard.webp" class="card-img-top" alt="Lizard">
           <div class="card-body">
             <h5 class="card-title">LIZARD</h5>
           </div>
         </div>
-        <!-- Card 5: Spock -->
         <div class="card text-center game-card-hover" style="width: 8rem;">
-          <a href="#" onclick="handleImageClick()" style="display: block;">
-            <img src="assets/images/spock.webp" class="card-img-top" alt="Spock">
-          </a>
+          <img src="assets/images/spock.webp" class="card-img-top" alt="Spock">
           <div class="card-body">
             <h5 class="card-title">SPOCK</h5>
           </div>
@@ -146,8 +131,16 @@
       <p>Losses: <span id="losses">0</span></p>
       <p>Ties: <span id="ties">0</span></p>
     </section>
-    <button id="resetButton" class="btn btn-primary">Reset Game</button>
 
+    <!-- Play Again and Instructions Buttons-->
+    <section>
+      <div id="game-controls" class="text-center mt-4">
+        <button id="play-again-btn" class="btn btn-success me-2">Play Again</button>
+        <button id="instructions-btn" class="btn btn-info">Launch Instructions</button>
+      </div>
+    </section>
+
+    <!-- Tries Counter -->
     <section class="tries-counter container mt-3 text-center">
       <h2 class="pulse">Galactic Opportunities: <span id="tries-left">5</span></h2>
     </section>
@@ -187,6 +180,8 @@
       <p>&copy; 2024 Cosmic Clash. All rights reserved.</p>
     </div>
   </footer>
+
+
   <!-- Bootstrap JS Link -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
@@ -194,7 +189,7 @@
   <!--FontAwesome Kit Link-->
   <script src="https://kit.fontawesome.com/c03f260391.js" crossorigin="anonymous"></script>
   <!-- JavaScript Link-->
-  <script src="../assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
